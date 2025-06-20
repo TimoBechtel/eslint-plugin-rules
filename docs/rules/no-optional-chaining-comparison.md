@@ -6,6 +6,34 @@
 
 <!-- end auto-generated rule header -->
 
+## Description
+
+This rule disallows the use of optional chaining in both sides of a comparison operator.
+
+### Why
+
+Both sides of the comparison can be undefined when using optional chaining. This could lead to unexpected results. See examples below.
+
+### Examples
+
+#### Invalid ❌
+
+```js
+const isOwner = useMemo(() => {
+   // 🚨 currentUser and author might not be loaded yet (undefined) causing the comparison to return true
+  return currentUser?.id === author?.id;
+}, [currentUser, author]);
+```
+
+#### Valid ✅
+
+```js
+const isOwner = useMemo(() => {
+   // ✅ currentUser and author are checked before the comparison
+  return currentUser && author && currentUser.id === author.id;
+}, [currentUser, author]);
+```
+
 ## Options
 
 <!-- begin auto-generated rule options list -->
