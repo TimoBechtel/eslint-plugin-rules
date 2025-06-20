@@ -1,0 +1,19 @@
+# vscode files
+.vscode/*
+!.vscode/settings.json
+
+# Dependency directories
+node_modules/
+
+# logs
+pnpm-debug.log*
+
+# test
+coverage
+
+# build files
+dist
+.parcel-cache
+
+# os related
+.DS_Store
