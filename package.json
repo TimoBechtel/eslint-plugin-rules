@@ -29,13 +29,16 @@
 		"requireindex": "^1.2.0"
 	},
 	"devDependencies": {
+		"@semantic-release/changelog": "^6.0.3",
+		"@semantic-release/git": "^10.0.1",
 		"@types/eslint": "^9.6.1",
 		"eslint": "^8.57.1",
 		"eslint-doc-generator": "^2.0.0",
 		"eslint-plugin-eslint-plugin": "^6.0.0",
 		"eslint-plugin-n": "^17.0.0",
 		"mocha": "^11.0.0",
-		"npm-run-all2": "^6.1.2"
+		"npm-run-all2": "^6.1.2",
+		"semantic-release": "^24.2.5"
 	},
 	"engines": {
 		"node": "^18.18.0 || ^20.9.0 || >=21.1.0"
